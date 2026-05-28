@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng</title>
+</head>
+<body>
+<header>
+    <h1>Form đặt hàng</h1>
+</header>
+<main>
+    <section>
+        <label for="search">Tìm kiếm sản phẩm:</label>
+        <input type="text" id="search" name="search" list="product_list" placeholder="Tên sản phẩm...">
+        <datalist id="product_list">
+            <option value="Sản phẩm A">
+            <option value="Sản phẩm B">
+            <option value="Sản phẩm C">
+        </datalist>
+    </section>
+    <form action="#" method="post">
+        <section>
+            <h2>Giỏ hàng</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sản phẩm A</td>
+                        <td>100.000 VND</td>
+                        <td>1</td>
+                        <td>100.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sản phẩm B</td>
+                        <td>200.000 VND</td>
+                        <td>1</td>
+                        <td>200.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sản phẩm C</td>
+                        <td>300.000 VND</td>
+                        <td>1</td>
+                        <td>300.000 VND</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Tổng cộng</td>
+                        <td>600.000 VND</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section>
+            <h2>Thanh toán</h2>
+            <fieldset>
+                <legend>Phương thức thanh toán</legend>
+
+                <input type="radio" id="bank" name="payment" value="bank">
+                <label for="bank">Chuyển khoản ngân hàng</label><br>
+
+                <input type="radio" id="cod" name="payment" value="cod">
+                <label for="cod">Thanh toán khi nhận hàng (COD)</label><br>
+
+                <input type="radio" id="wallet" name="payment" value="momo">
+                <label for="wallet">Ví điện tử (Momo)</label><br><br>  
+
+                <label for="voucher">Mã giảm giá:</label>
+                <input type="text" id="voucher" name="voucher" placeholder="Nhập mã giảm giá SALE và kèm 4 số" pattern="SALE[0-9]{4}"><br>
+
+                <label for="note">Ghi chú:</label>
+                <textarea id="note" name="note" placeholder="Yêu cầu về đơn hàng"></textarea><br><br>
+            </fieldset>
+            <br>
+        </section>
+        <section>
+            <h2>Thông tin giao hàng</h2>
+            <fieldset>
+                <legend>Thông tin giao hàng</legend>
+
+                <label for="city">Thành phố</label><br>
+                <select id="city" name="city" required>
+                    <option value="">Chọn thành phố</option>
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="hcm">Hồ Chí Minh</option>
+                    <option value="danang">Đà Nẵng</option>
+                    <option value="hue">Huế</option>
+                    <option value="cantho">Cần Thơ</option>
+                </select><br><br>
+
+                <label for="district">Quận/Huyện</label><br>
+                <select id="district" name="district">
+                    <option value="">Chọn quận/huyện</option>
+                    <option value="district1">Quận 1</option>
+                    <option value="district2">Quận 2</option>
+                </select><br><br>
+
+                <label for="adress">Địa chỉ chi tiết</label><br>
+                <textarea id="adress" name="adress" rows="3" required></textarea><br><br>
+
+                <p>Giới tính</p>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Nam</label><br>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Nữ</label><br>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label for="other">Khác</label><br><br>
+
+                <label for="deliver_date">Ngày giao hàng mong muốn</label>
+                <input type="date" id="deliver_date" name="deliver_date" min="2026-04-28" required><br><br>
+
+                <label for="deliver_time">Giờ giao hàng mong muốn</label>
+                <select id="deliver_time" name="deliver_time" required>
+                    <option value="morning">Sáng (8:00 - 12:00)</option>
+                    <option value="afternoon">Chiều (14:00 - 18:00)</option>
+                    <option value="evening">Tối (18:00 - 21:00)</option>
+                </select>
+                <br><br>
+                <label for="deliver_range">Thời gian giao hàng (số ngày):</label>
+                <input type="range" id="deliver_range" name="deliver_range" min="1" max="7" step="1">
+            </fieldset>
+        </section>
+        <br>
+        <button type="submit" aria-label="Xác nhận đặt hàng">Xác nhận đặt hàng</button>
+    </form>
+</main>
+</body>
+</html>
