@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation Test</title>
+</head>
+<body>
+    <form>
+        <p>User để trống</p>
+        <input type="text" required value="">
+
+        <p>User gõ "abc" vào trường email</p>
+        <input type="email" value="abc">
+
+        <p>User gõ 15 vào trường số</p>
+        <input type="number" min="1" max="10" value="15">
+
+        <p>User gõ "abc123" vào trường văn bản</p>
+        <input type="text" pattern="[0-9]{10}" value="abc123">
+
+        <p>User gõ "123" vào trường mật khẩu</p>
+        <input type="password" minlength="8" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
