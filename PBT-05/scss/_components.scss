@@ -1,0 +1,124 @@
+body{
+    font-family: $font-primary;
+    background: $background-color;
+    color: $text-color;
+}
+
+.header{
+    background: $secondary-color;
+    color: $white;
+
+    padding: $spacing-md $spacing-lg;
+
+    @include flex-center;
+
+    justify-content: space-between;
+
+    .logo{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links{
+        display: none;
+        list-style: none;
+        gap: $spacing-lg;
+
+        a{
+            text-decoration: none;
+            color: $white;
+            transition: $transition;
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+
+    .hamburger{
+        background: none;
+        border: none;
+        color: $white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+
+    padding: $spacing-lg;
+}
+
+.card{
+    background: $white;
+
+    border-radius: $radius-md;
+
+    overflow: hidden;
+
+    transition: $transition;
+
+    @include card-shadow;
+
+    .card-image{
+        width: 100%;
+        display: block;
+    }
+
+    .card-content{
+        padding: $spacing-md;
+    }
+
+    .card-title{
+        font-size: 20px;
+        margin-bottom: $spacing-sm;
+    }
+
+    .card-price{
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    &:hover{
+        transform: translateY(-6px);
+    }
+
+    &.featured{
+        border: 2px solid $primary-color;
+    }
+}
+
+.footer{
+    background: $secondary-color;
+    color: $white;
+    text-align: center;
+
+    padding: $spacing-lg;
+}
+
+@include respond-to(tablet){
+
+    .nav-links{
+        display: flex !important;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@include respond-to(desktop){
+
+    .product-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
