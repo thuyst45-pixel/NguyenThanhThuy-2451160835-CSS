@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản lý sinh viên</title>
+  <link rel="stylesheet" href="QLSV.CSS">
+</head>
+<body>
+  <div class="container">
+    <h1>STUDENT MANAGEMENT SYSTEM</h1>
+    <div class="summary">
+      <p>Tổng số sinh viên: <span id="totalStudent">0</span> | Điểm TB lớp: <span id="avgGPA">0</span></p>
+    </div>
+
+    <div class="actions">
+      <button id="btnAdd">THÊM SINH VIÊN</button>
+    </div>
+
+    <div id="message"></div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <form id="form-js">
+          <h2 id="formTitle">Thêm Sinh Viên</h2>
+          <div class="form-group">
+              <label for="msv2">MÃ SINH VIÊN</label>
+              <input id="msv2" name="msv" type="text" placeholder="VD: SV123456">
+              <div class="error" id="error-msv2"></div>
+          </div>       
+          <div class="form-group">
+              <label for="name2">HỌ VÀ TÊN</label>
+              <input id="name2" name="name" type="text"/>
+              <div class="error" id="error-name2"></div>
+          </div>
+          <div class="form-group">
+              <label for="dbt2">NGÀY SINH</label>
+              <input id="dbt2" name="dbt" type="date">
+              <div class="error" id="error-dbt2"></div>
+          </div>
+          <div class="form-group">
+              <label for="cl2">LỚP HỌC</label>
+              <select id="cl2" name="cl">
+                <option value="">--Chọn lớp--</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="D">D</option>
+              </select>
+              <div class="error" id="error-cl2"></div>
+          </div>
+          <div class="form-group">
+              <label for="dtb2">ĐIỂM TRUNG BÌNH</label>
+              <input id="dtb2" name="dtb" type="number" step="0.01">
+              <div class="error" id="error-dtb2"></div>
+          </div>
+          <div class="form-group">
+              <label for="email2">EMAIL SINH VIÊN</label>
+              <input id="email2" name="email" type="text" placeholder="@student.edu.vn">
+              <div class="error" id="error-email2"></div>
+          </div>
+          <div class="form-group">
+              <label for="password2">MẬT KHẨU TÀI KHOẢN</label>
+              <input id="password2" name="password" type="password" placeholder="Tối thiểu 8 ký tự" />
+              <div class="error" id="error-password2"></div>
+          </div>
+          <div class="form-group">
+              <label for="pw2">XÁC NHẬN MẬT KHẨU</label>
+              <input id="pw2" name="pw" type="password">
+              <div class="error" id="error-pw2"></div>
+          </div>
+          <div class="form-actions">
+              <button type="submit">LƯU SINH VIÊN</button>
+              <button type="button" onclick="closeForm()">HỦY</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>MÃ SV</th>
+          <th>HỌ VÀ TÊN</th>
+          <th>NGÀY SINH</th>
+          <th>LỚP</th>
+          <th>ĐTB</th>
+          <th>ACTIONS</th>
+        </tr>      
+      </thead>
+      <tbody id="studentList"></tbody>
+    </table>
+
+  </div>
+  <script src="QLSV.js"></script>
+</body>
+</html>
