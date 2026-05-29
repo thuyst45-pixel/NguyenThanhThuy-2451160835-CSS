@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Công Việc</title>
+
+    <link rel="stylesheet" href="QLCV.css">
+</head>
+<body>
+    <div id="message"></div>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Quản Lý Công Việc</h1>
+            <button id="btnAdd" class="add-btn">+</button>
+        </div>
+
+        <div class="summary">
+            <div class="summary-left">
+                <button>Tất cả (<span id="totalTasks">0</span>)</button>
+                <button class="green">Hoàn thành (<span id="completedTasks">0</span>)</button>
+                <button>Chưa hoàn thành (<span id="pendingTasks">0</span>)</button>
+            </div>
+
+            <div class="summary-right">
+                <button class="active-priority">Tất cả ưu tiên</button>
+                <button class="priority-low">Ưu tiên thấp</button>
+                <button class="priority-medium">Ưu tiên trung bình</button>
+                <button class="priority-high">Ưu tiên cao</button>
+            </div>
+        </div>
+        <div id="taskList" class="task-list"></div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Thêm công việc</h2>
+                <span id="closeModalBtn" class="close">
+                    &times;
+                </span>
+            </div>
+
+            <form id="taskForm">
+                <input type="hidden" id="taskId">
+                <div class="form-group">
+                    <label>H Tiêu đề</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Mô tả</label>
+                    <textarea id="description"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Độ ưu tiên</label>
+                        <select id="priority">
+                            <option value="low">Thấp</option>
+                            <option value="medium">Trung bình</option>
+                            <option value="high">Cao</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hạn hoàn thành</label>
+                        <input type="date" id="deadline" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancelBtn">Hủy</button>
+                    <button type="submit">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="QLCV.js"></script>
+</body>
+</html>
