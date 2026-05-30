@@ -1,0 +1,30 @@
+:root {
+    --bs-primary: #14b8a6; 
+    --bs-primary-rgb: 20, 184, 166;
+    --bs-secondary: #64748b;  
+    --bs-primary-hover: #0d9488;
+
+    --bs-body-bg: #f8fafc;
+
+    --bs-body-color: #334155;
+}
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #0f172a;
+}
+.btn {
+    border-radius: 8px;
+}
+.btn-primary:hover {
+    background-color: var(--bs-primary-hover);
+}
+.form-control {
+    border-radius: 10px;
+}
+.navbar {
+    box-shadow: var(--custom-shadow);
+}
