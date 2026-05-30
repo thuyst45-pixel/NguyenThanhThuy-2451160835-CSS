@@ -1,0 +1,68 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background:
+        linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+.hero h1 span {
+    color: rgba(243, 214, 96, 0.947);
+}
+.hero p {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 3rem;
+}
+.cta-button {
+    text-decoration: none;
+    background: white;
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    padding:
+        1rem
+        2.5rem;
+    border-radius: 999px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 1024px){
+    .hero h1{ font-size: 3.5rem; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.15rem; }
+}
+
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.25rem;
+    }
+    .cta-button {
+        padding:
+            1rem
+            2.5rem;
+        font-size: 1rem;
+    }
+}

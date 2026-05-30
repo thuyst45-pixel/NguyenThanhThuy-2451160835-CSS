@@ -1,0 +1,74 @@
+.skills {
+    padding:
+        5rem
+        8%;
+    background: #f1f5f9;
+}
+.skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 4rem;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.05);
+}
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+.skill-progress {
+    height: 100%;
+    border-radius: 999px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--color-primary),
+            var(--color-secondary)
+        );
+    transform: scaleX(0);
+    transform-origin: left;
+    animation:
+        loadSkill 2s ease-out forwards;
+}
+.skill-progress.html {
+    width: 95%;
+}
+.skill-progress.css {
+    width: 90%;
+}
+.skill-progress.js {
+    width: 85%;
+}
+.skill-progress.react {
+    width: 80%;
+}
+@media (max-width: 767px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    .skills h2 { font-size: 2rem; }
+}
+@keyframes loadSkill {
+    to { transform: scaleX(1); }
+}

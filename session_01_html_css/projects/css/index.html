@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Minh Anh</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Hi, I'm
+            <span>Minh Anh</span>
+        </h1>
+        <p>
+            Full-Stack Developer | UI Designer | Problem Solver
+        </p>
+        <a href="#portfolio" class="cta-button">
+            View My Work
+        </a>
+    </section>
+    <section class="about" id="about">
+        <div class="about-image">
+            <img 
+                src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.30808-6/481295036_659050866479066_4888374520329494527_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=fe5ecc&_nc_eui2=AeGQpoEFV2jXlfInn84n9aFjmjr8sSWHLyCaOvyxJYcvIA_iUU0bNv2x3EnkKwFcI1dP86DLDH1nwDkrKp_jI9dL&_nc_ohc=tUfQCdl3SVQQ7kNvwGx7hk4&_nc_oc=AdoJfose8ijTL8ciFu3Ozmrs2KHF-hqgVJaIQG2ASGVb5VyRv0mfLP9lbnoWa_Wl3O_VuVAyM4NbToBYyTLvSJ8Y&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&_nc_gid=0AP9L-2DA8ZMokECtw-m0Q&_nc_ss=7b2a8&oh=00_Af6zDYckAT_3u2B5f1Tr_2mEH6vqOGBKJMHHSWgZlBYa9A&oe=6A094348"
+                alt="Profile Avatar">
+        </div>
+        <div class="about-content">
+            <h2>About me</h2>
+            <p class="lead">Passionate developer focused on creating modern and user-friendly web experiences.</p>
+            <p>I enjoy building responsive websites, learning new technologies, and solving real-world problems through code.</p>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-info">
+                    <span>HTML5</span>
+                    <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress html"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-info">
+                    <span>CSS3</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress css"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress js"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-info">
+                    <span>React</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress react"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Web</button>
+                <button class="filter-btn">Mobile</button>
+                <button class="filter-btn">Design</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <a href="#lightbox-1" class="lightbox-link">
+                        <img src="https://themevip.net/wp-content/uploads/2024/12/traicaydonglanh-1234x1536.webp" alt="Project 1">
+                    </a>
+                    <div class="portfolio-overlay">
+                        <h3>E-Commerce Website</h3>
+                        <p>React + Node.js</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="mobile">
+                    <a href="#lightbox-2" class="lightbox-link">
+                        <img src="https://www.foodiv.com/wp-content/uploads/2023/10/Title-change-Top-Online-Food-Delivery-Apps-1.jpg" alt="Project 2">
+                    </a>
+                    <div class="portfolio-overlay">
+                        <h3>Food Delivery App</h3>
+                        <p>Flutter Mobile App</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="design">
+                    <a href="#lightbox-3" class="lightbox-link">
+                        <img src="https://unblast.com/wp-content/uploads/2020/02/Smart-Home-Dashboard-Ui-Template-1-1536x1024.jpg" alt="Project 3">
+                    </a>
+                    <div class="portfolio-overlay">
+                        <h3>Dashboard UI</h3>
+                        <p>Figma Design</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <a href="#lightbox-4" class="lightbox-link">
+                        <img src="https://www.webfx.com/wp-content/uploads/2021/10/portfolio_website_design_13portfolio_of_work_example_jr.jpg" alt="Project 4">
+                    </a>
+                    <div class="portfolio-overlay">
+                        <h3>Portfolio Website</h3>
+                        <p>HTML+CSS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="mobile">
+                    <a href="#lightbox-5" class="lightbox-link">
+                        <img src="https://as1.ftcdn.net/v2/jpg/01/19/10/50/1000_F_119105017_fvaI0vIf10n6WmvCTnlHtO5sBxZaEcxk.jpg" alt="Project 5">
+                    </a>
+                    <div class="portfolio-overlay">
+                        <h3>Fitness Tracker</h3>
+                        <p>React Native</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <a href="#lightbox-6" class="lightbox-link">
+                        <img src="https://wpklik.com/wp-content/uploads/2022/01/Examples-of-Educational-Websites-to-Inspire-You.jpg" alt="Project 6">
+                    </a>
+                    <div class="portfolio-overlay">
+                        <h3>Educational Website</h3>
+                        <p>React + Node.js</p>
+                    </div>
+                </div>
+            </div>
+            <div id="lightbox-1" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="https://themevip.net/wp-content/uploads/2024/12/traicaydonglanh-1234x1536.webp" alt="Project 1">
+            </div>
+            <div id="lightbox-2" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="https://www.foodiv.com/wp-content/uploads/2023/10/Title-change-Top-Online-Food-Delivery-Apps-1.jpg" alt="Project 2">
+            </div>
+            <div id="lightbox-3" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                    <img src="https://unblast.com/wp-content/uploads/2020/02/Smart-Home-Dashboard-Ui-Template-1-1536x1024.jpg" alt="Project 3">
+            </div>
+            <div id="lightbox-4" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+               <img src="https://www.webfx.com/wp-content/uploads/2021/10/portfolio_website_design_13portfolio_of_work_example_jr.jpg" alt="Project 4">
+            </div>
+            <div id="lightbox-5" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+               <img src="https://as1.ftcdn.net/v2/jpg/01/19/10/50/1000_F_119105017_fvaI0vIf10n6WmvCTnlHtO5sBxZaEcxk.jpg" alt="Project 5">
+            </div>
+            <div id="lightbox-6" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="https://wpklik.com/wp-content/uploads/2022/01/Examples-of-Educational-Websites-to-Inspire-You.jpg" alt="Project 6">
+            </div>            
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out. I'm always open to discussing new projects.</p>
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <span>ma8719670@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <span>Hanoi, Vietnam</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Minh Anh</div>
+                <p class="footer-tagline">Building digital experiences</p>
+                <div class="social-links">
+                    <a href="https://github.com/minhanh137" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.027-3.062-1.865-3.062-1.867 0-2.153 1.459-2.153 2.967v5.699h-3v-10h2.879v1.367h.041c.401-.759 1.381-1.558 2.844-1.558 3.041 0 3.604 2.002 3.604 4.604v5.587z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:ma8719670@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 13.065l-11.985-7.065h23.97l-11.985 7.065zm11.985-9.065h-23.97c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h23.97c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 4.236v9.764h-23.97v-9.764l11.985 7.065 11.985-7.065z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Minh Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
