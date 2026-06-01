@@ -8,12 +8,12 @@ function UserProfile() {
                 <tbody>
                     <tr>
                         <td>Họ tên:</td>
-                        <td>Minh Anh</td>
+                        <td>Thanh Thúy </td>
                     </tr>
 
                     <tr>
                         <td>Email:</td>
-                        <td>ma8719670@gmail.com</td>
+                        <td>thuyst45@gmail.com</td>
                     </tr>
                 </tbody>
             </table>
